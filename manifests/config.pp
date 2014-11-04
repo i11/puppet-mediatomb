@@ -6,9 +6,14 @@ class mediatomb::config (
   $ui = $mediatomb::config::params::ui
 ) inherits mediatomb::config::params {
 
-  file { $mediatomb::config_path:
+  # Used only for redhat family
+  $ifs = split($interfaces, ',')
+  $if = $ifs[0]
+
+  file { $mediatomb::config_file:
     ensure  => file,
     require => Package[$mediatomb::package_name],
-    content => template("${module_name}/config.xml.erb"),
+    content => template($mediatomb::config_template),
+    mode    => 444,
   }
 }

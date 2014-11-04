@@ -1,6 +1,6 @@
 {
   "name": "i11-mediatomb",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Ilja Bobkevic",
   "summary": "Module for setting up MediaTomb, an open source (GPL) UPnP MediaServer",
   "license": "Apache 2.0",
@@ -9,13 +9,12 @@
   "issues_url": "https://github.com/i11/puppet-mediatomb/issues",
   "tags": ["mediatomb", "upnp"],
   "dependencies": [
-    {
-      "name": "puppetlabs-stdlib",
-      "version_range": ">= 1.0.0"
-    }
+    { "name": "puppetlabs-stdlib", "version_range": ">= 1.0.0" }
   ],
   "operatingsystem_support": [
-    { "operatingsystem":"RedHat" },
+    { "operatingsystem": "RedHat" },
+    { "operatingsystem": "CentOS" },
+    { "operatingsystem": "Debian" },
     { "operatingsystem": "Ubuntu" }
   ]
 }
